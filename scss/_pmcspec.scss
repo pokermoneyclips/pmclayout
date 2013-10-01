@@ -1,0 +1,195 @@
+img, input[type="image"] {
+max-width:100%;
+height: auto;
+}
+
+/* Top and Bottom Torn Edges */
+#top_black {
+	height:24px;
+	background: {
+		image: url(../corners/tops_bottoms.gif);
+		repeat: repeat-x;
+		position:0 0px;
+	}
+}
+
+#bottom_black {
+	clear:both;
+	height:24px;
+	background: {
+		image: url(../corners/tops_bottoms.gif);
+		repeat: repeat-x;
+		position:0 -24px;
+	}
+}
+/* END Black Torn Edges */
+
+#inner_wrap {
+background:#000;
+}
+
+#header_image {
+
+}
+
+#header_title {
+	
+	h1 {
+	margin:0;
+	line-height:1em;
+	}
+	h2 {
+	margin:0;
+	line-height:1.2em;
+	}
+}
+
+#body_wrap {
+clear:both;
+}
+
+/* Center Column Torn Edges */
+#body_copy {
+@include contentmargin;
+padding: 0.25em;
+background:#fff;
+
+	&:before {
+		@include beforeandafter;
+		top:0;
+		left:-16px;
+		background: {
+			image: url(../corners/left_right.gif);
+			repeat: repeat-y;
+			position: -32px 0;
+		}	
+	}
+
+	&:after {
+		@include beforeandafter;
+		top:0;
+		right:-16px;
+		background: {
+			image: url(../corners/left_right.gif);
+			repeat: repeat-y;
+			position: -48px 0;
+		}	
+	}
+}
+	
+#white_border_top {
+@include contentmargin;
+	background: {
+		image: url(../corners/tops_bottoms.gif);
+		repeat: repeat-x;
+		position:0 -48px;
+
+	}
+	height:24px;	
+	
+		&:before {
+		@include beforeandafter;
+		top:0;
+		left:-16px;
+		background: {
+			image: url(../corners/corners.gif);
+			repeat: no-repeat;
+			position: -32px 0px;
+		}	
+	}
+
+	&:after {
+		@include beforeandafter;
+		top:0;
+		right:-16px;
+		background: {
+			image: url(../corners/corners.gif);
+			repeat: no-repeat;
+			position: -48px 0px;
+		}	
+	}
+}
+
+#white_border_bottom {
+@include contentmargin;
+	background: {
+		image: url(../corners/tops_bottoms.gif);
+		repeat: repeat-x;
+		position:0 -72px;
+
+	}
+	height:24px;	
+	
+	&:before {
+		@include beforeandafter;
+		top:0;
+		left:-16px;
+		background: {
+			image: url(../corners/corners.gif);
+			repeat: no-repeat;
+			position: -32px -24px;
+		}	
+	}
+
+	&:after {
+		@include beforeandafter;
+		top:0;
+		right:-16px;
+		background: {
+			image: url(../corners/corners.gif);
+			repeat: no-repeat;
+			position: -48px -24px;
+		}	
+	}
+}
+/* END Center column torn edges */
+
+/* Fonts and Stuff */
+#body_copy {
+	p {
+	margin:0 0 1em;
+	}
+	
+	a{
+		color: #666;
+		text-decoration: underline;
+	}
+}
+
+h1 {
+margin:0;
+}
+
+h2 {
+margin:0 0 0.25em;
+}
+
+a { 
+color:#ccc;
+text-decoration: underline;
+}
+
+#footer {
+	a {
+		color:#333;
+	}
+}
+
+/* Video Player 
+http://avexdesigns.com/responsive-youtube-embed
+*/
+.media_embed {
+position: relative;
+padding-bottom: 56.25%;
+overflow: hidden;
+margin-bottom: 1em;
+
+	iframe, object, embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%; 
+	}
+}
+  /* END Video Player */
